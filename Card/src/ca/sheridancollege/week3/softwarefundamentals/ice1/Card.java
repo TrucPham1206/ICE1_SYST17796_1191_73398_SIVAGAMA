@@ -49,11 +49,11 @@ public class Card {
             System.out.println("you lose");
             
         }
-        //CHANGES HAVE BEEN DONE
+      
         //insert code to ask the user for Card value and suit, create their card
         // and search magicHand here
         //Then report the result here
-    
+    //changes are now done!
     
     }
     

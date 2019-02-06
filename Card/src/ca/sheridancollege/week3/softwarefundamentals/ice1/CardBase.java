@@ -17,20 +17,27 @@ package ca.sheridancollege.week3.softwarefundamentals.ice1;
 public class CardBase 
 {
     private String suit; // Hearts,Spades,Clubs,Diamond
-    private int value; //1-13 
+    private int values; //1-13 
     public static final String[] SUITS={"Hearts","Spades","Clubs","Diamonds"};
 
     /**
      * @return the suit
      */
-    public String getSuit() {
+    public CardBase()
+    {
+        values = 0;
+        suit="";
+    }
+    public String getSuit() 
+    {
         return suit;
     }
 
     /**
      * @param suit the suit to set
      */
-    public void setSuit(String suit) {
+    public void setSuit(String suit) 
+    {
         this.suit = suit;
     }
 
@@ -38,14 +45,24 @@ public class CardBase
      * @return the value
      */
     public int getValue() {
-        return value;
+        return values;
     }
 
     /**
      * @param value the value to set
      */
     public void setValue(int value) {
-        this.value = value;
+        this.values = value;
+    }
+    
+    public int giveSuit()
+    {
+        return (int)(Math.random()*3);
+    }
+    
+    public int giveValue()
+    {
+        return (int)(Math.random()*3)+1;
     }
 
 // insert 2 random number methods for generating value and suits 

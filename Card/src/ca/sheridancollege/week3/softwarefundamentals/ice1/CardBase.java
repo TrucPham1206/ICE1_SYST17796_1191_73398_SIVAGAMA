@@ -20,6 +20,12 @@ public class CardBase
     private int value; //1-13 
     public static final String[] SUITS={"Hearts","Spades","Clubs","Diamonds"};
 
+    public CardBase() {
+    	value = 0;
+    	suit = "";
+    }
+    
+    
     /**
      * @return the suit
      */
@@ -47,7 +53,16 @@ public class CardBase
     public void setValue(int value) {
         this.value = value;
     }
+    
+    public int giveSuit() {
+    	return (int) (Math.random()*3);
+    }
+    
+    public int giveValue() {
+    	return (int) (Math.random()*3)+1;
+    }
 
 // insert 2 random number methods for generating value and suits 
+    
 
 }

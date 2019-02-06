@@ -24,6 +24,7 @@ public class Card {
     
         CardBase[] magicHand = new CardBase[7];
         CardBase myCard = new CardBase();
+        CardBase luckyCard = new CardBase();
         Scanner k = new Scanner(System.in);
         Boolean cardFound = false;
         
@@ -48,19 +49,22 @@ public class Card {
         myCard.setSuit(CardBase.SUITS[k.nextInt()]);
         k.nextLine();
         
+        luckyCard.setValue(1);
+        luckyCard.setSuit(CardBase.SUITS[1]);
+        
         System.out.println("Seven randonmy selected cards:");
         for (int i = 0; i < magicHand.length; i++) {
             System.out.println(magicHand[i].getValue() + " of " + magicHand[i].getSuit());
-            if (myCard.getValue() == magicHand[i].getValue() && myCard.getSuit().equals(magicHand[i].getSuit())) {
+            if (luckyCard.getValue() == magicHand[i].getValue() && luckyCard.getSuit().equals(magicHand[i].getSuit())) {
                 cardFound = true;
             }
         }
         
         if (cardFound) {
-            System.out.println("Your card (" + myCard.getValue() + " of " + myCard.getSuit() + ") was found!");
+            System.out.println("The card (" + luckyCard.getValue() + " of " + luckyCard.getSuit() + ") was found!");
         }
         else {
-            System.out.println("Your card (" + myCard.getValue() + " of " + myCard.getSuit() + ") was NOT FOUND!");
+            System.out.println("The card (" + luckyCard.getValue() + " of " + luckyCard.getSuit() + ") was NOT FOUND!");
         }
     }
     

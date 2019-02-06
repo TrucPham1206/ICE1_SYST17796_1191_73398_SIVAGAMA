@@ -5,6 +5,9 @@
  */
 package ca.sheridancollege.week3.softwarefundamentals.ice1;
 
+import java.util.Objects;
+import java.util.Random;
+
 /**
  * A class that models playing card Objects. Cards have 
  * a value (note that Ace = 1, Jack -11, Queen =12, King = 13)
@@ -14,11 +17,24 @@ package ca.sheridancollege.week3.softwarefundamentals.ice1;
  * add your name as a modifier.
  * @author Sivagami
  */
-public class CardBase 
+public class CardBase
 {
     private String suit; // Hearts,Spades,Clubs,Diamond
-    private int value; //1-13 
+    private int value; //1-13
     public static final String[] SUITS={"Hearts","Spades","Clubs","Diamonds"};
+
+    public CardBase(String suit, int value) {
+        this.suit = suit;
+        this.value = value;
+    }
+
+    @Override
+    public String toString() {
+        return "CardBase{" +
+                "suit='" + suit + '\'' +
+                ", value=" + value +
+                '}';
+    }
 
     /**
      * @return the suit
@@ -48,6 +64,32 @@ public class CardBase
         this.value = value;
     }
 
-// insert 2 random number methods for generating value and suits 
+// insert 2 random number methods for generating value and suits
 
+
+    @Override
+    public boolean equals(Object o)
+    {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        CardBase cardBase = (CardBase) o;
+        return value == cardBase.value &&
+        Objects.equals(suit, cardBase.suit);
+    }
+
+    @Override
+        public int hashCode()
+        {
+        return Objects.hash(suit, value);
+        }
+        
+        public class CardTrick
+        {
+
+        public static int generateRandomNaumber(int min, int max)
+        {
+        return new Random().nextInt((max-min)+1)+min;
+        }
+}
+        
 }

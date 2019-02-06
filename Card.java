@@ -80,8 +80,9 @@ public class Card {
             System.out.println("Sorry your card is not in the magic hand");          
         }
     
-//    Card luckyCard = new Card(1,"Spade");
-////    luckyCard
+   CardBase luckyCard = new CardBase   
+        luckyCard.setValue(12);
+        luckyCard.setSuit("heart)
     }
     
 }

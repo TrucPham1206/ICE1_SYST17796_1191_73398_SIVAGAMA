@@ -41,13 +41,13 @@ public class Card {
         // and search magicHand here
         //Then report the result here
         
-        System.out.print("Enter a card value (1 - A, 2 - 10, 11 - J, 12 - Q, 13 - K): ");
-        myCard.setValue(k.nextInt());
-        k.nextLine();
-        
-        System.out.print("Enter a card suit (0 - Hearts, 1 - Spades, 2 - Clubs, 3 - Diamonds): ");
-        myCard.setSuit(CardBase.SUITS[k.nextInt()]);
-        k.nextLine();
+//        System.out.print("Enter a card value (1 - A, 2 - 10, 11 - J, 12 - Q, 13 - K): ");
+//        myCard.setValue(k.nextInt());
+//        k.nextLine();
+//        
+//        System.out.print("Enter a card suit (0 - Hearts, 1 - Spades, 2 - Clubs, 3 - Diamonds): ");
+//        myCard.setSuit(CardBase.SUITS[k.nextInt()]);
+//        k.nextLine();
         
         luckyCard.setValue(1);
         luckyCard.setSuit(CardBase.SUITS[1]);

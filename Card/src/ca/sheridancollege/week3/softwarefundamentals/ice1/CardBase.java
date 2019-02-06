@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package ca.sheridancollege.week3.softwarefundamentals.ice1;
+import java.util.Random;
 
 /**
  * A class that models playing card Objects. Cards have 
@@ -46,6 +47,19 @@ public class CardBase
      */
     public void setValue(int value) {
         this.value = value;
+    }
+ public static int randomValue() {
+        
+        Random choice = new Random();
+        int r = choice.nextInt(13) + 1;
+        
+        return r;
+    }
+    public static int randomSuit() {
+        
+        Random choice = new Random();
+        
+        return choice.nextInt(4);
     }
 
 

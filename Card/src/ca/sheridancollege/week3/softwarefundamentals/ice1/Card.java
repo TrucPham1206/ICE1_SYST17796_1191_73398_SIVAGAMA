@@ -39,5 +39,6 @@ public class Card {
         CardBase userCard =new CardBase(usersuitChoice,usersNumberChoice);
         System.out.println((Arrays.asList(magicHand).contains(userCard))?"You win":"You lose");
     }
+    //changes are done 
 }
      

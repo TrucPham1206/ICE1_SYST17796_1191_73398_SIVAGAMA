@@ -45,19 +45,22 @@ public class Card {
         }
         //insert code to ask the user for Card value and suit, create their card
        
-
+        CardBase luckyCard = new CardBase   
+        luckyCard.setValue(12);
+        luckyCard.setSuit("heart)
+    
         
-        System.out.print("What is the value of the card ");    
-        int userValue = input.nextInt();
-        System.out.println("");
+       // System.out.print("What is the value of the card ");    
+        //int userValue = input.nextInt();
+        //System.out.println("");
         
-        System.out.print("What is the Suit of the card ");    
-        String userSuit = input.next();
+        //System.out.print("What is the Suit of the card ");    
+        //String userSuit = input.next();
         
-        CardBase u = new CardBase();
+        //CardBase u = new CardBase();
         
-        u.setValue(userValue);
-        u.setSuit(userSuit);
+       // u.setValue(userValue);
+        //u.setSuit(userSuit);
         
         // and search magicHand here
         for(int i=0; i<magicHand.length; i++){
@@ -80,9 +83,6 @@ public class Card {
             System.out.println("Sorry your card is not in the magic hand");          
         }
     
-   CardBase luckyCard = new CardBase   
-        luckyCard.setValue(12);
-        luckyCard.setSuit("heart)
-    }
+                          
     
 }
